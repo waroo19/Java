@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class BoatParts {
+    public static void main(String[] args) {
+
+        Scanner read = new Scanner(System.in);
+
+        int getPart = read.nextInt();
+        int getNum = read.nextInt();
+        ArrayList<String> boat = new ArrayList<String>();
+        ArrayList<String> boughtPart = new ArrayList<String>();
+
+
+        for (int i = 0; i < getNum; i++){
+            boat.add(read.next());
+        }
+
+        for(String part: boat)
+        {
+            if(!boughtPart.contains(part))
+                        {
+                      boughtPart.add(part);}
+
+   }
+
+
+        if (boughtPart.size() == getPart)
+        {
+            int day = boat.lastIndexOf(boughtPart.get(boughtPart.size()-1));
+            System.out.println(day+1);
+        }
+        else
+        {
+            System.out.println("paradox avoided");
+
+
+        }
+
+
+        }
+
+
+    }
+
